@@ -91,7 +91,7 @@ const Accordian = ({ data }) => {
   );
 };
 
-const Faq = () => {
+const Faq = ({faqRef}) => {
   const [activeTab, setActiveTab] = useState("1");
   console.log(activeTab);
 
@@ -102,7 +102,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="my-14">
+    <div ref={faqRef} className="my-14">
       <h1 className=" font-semibold text-lg py-8 text-center">
         Frequently Asked <span className="text-secondaryBlue">Questions</span>
       </h1>

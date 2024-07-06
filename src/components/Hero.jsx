@@ -2,7 +2,7 @@ import React from 'react'
 import heroimg from "../assets/images/hero.png"
 import earnimg from "../assets/images/earn.png"
 
-const Hero = () => {
+const Hero = ({handleOpen}) => {
   return (
     <div className="mx-auto relative mt-4 w-[75vw] overflow-hidden h-[60vh] flex justify-between bg-secondaryText bg-opacity-15 rounded-2xl shadow-xl">
       <div className="mx-10 my-auto">
@@ -19,7 +19,7 @@ const Hero = () => {
               Rs. 15,000
             </span>
           </p>
-          <button className="bg-secondaryText text-white px-4 py-3 rounded">
+          <button onClick={handleOpen} className="bg-secondaryText text-white px-4 py-3 rounded">
             Refer now
           </button>
         </div>

@@ -17,9 +17,9 @@ const result2 = [...Array(30)].map(() => ProgramDetail[0]);
 
 
 
-const Benefits = () => {
+const Benefits = ({benefitRef, handleOpen}) => {
   return (
-    <div className="text-center mt-10 capitalize">
+    <div ref={benefitRef} className="text-center mt-12 capitalize">
       <h1 className=" font-semibold text-lg">
         What are the{" "}
         <span className="text-secondaryBlue">referral benefits?</span>
@@ -73,7 +73,7 @@ const Benefits = () => {
           <FaChevronDown className="inline-flex mx-2 p-0.5" />
         </button>
 
-        <button className="mx-auto bg-secondaryText mt-12 text-white px-10 py-3 rounded">
+        <button onClick={handleOpen} className="mx-auto bg-secondaryText mt-12 text-white px-10 py-3 rounded">
           Refer Now
         </button>
       </div>

@@ -7,9 +7,9 @@ import { GiWallet } from "react-icons/gi";
 
 
 
-const Refer = () => {
+const Refer = ({referRef , handleOpen}) => {
   return (
-    <div className="bg-secondaryText p-3 h-fit bg-opacity-15 mt-10 text-center">
+    <div ref={referRef} className="bg-secondaryText p-3 h-fit bg-opacity-15 mt-12 text-center">
       <h1 className="capitalize text-lg font-semibold">
         How do i <span className="text-secondaryText"> refer?</span>
       </h1>
@@ -33,7 +33,7 @@ const Refer = () => {
           </div>
         </div>
       </div>
-      <button className="bg-secondaryText mt-12 text-white px-10 py-3 rounded">
+      <button onClick={handleOpen} className="bg-secondaryText mt-12 text-white px-10 py-3 rounded">
         Refer Now
       </button>
     </div>

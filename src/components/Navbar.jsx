@@ -2,9 +2,10 @@ import React from 'react'
 import logoimg from '../assets/images/logo.png'
 import TippyCourses from './TippyCourses'
 
-const Navbar = () => {
+const Navbar = ({setFormModel}) => {
+
   return (
-    <div className=' bg-white z-50 shadow *:p-3 py-0.5  w-full'>
+    <div className=' bg-white shadow *:p-3 py-0.5  w-full'>
 
     <div className='flex mx-20 justify-between items-center'>
       <div className="flex gap-10">
@@ -20,7 +21,7 @@ const Navbar = () => {
           <li>resources</li>
           <li>about us</li>
           <li className="gap-3 flex  *:rounded">
-            <button className="bg-graybg p-2 bg-opacity-20">Login</button>
+            <button onClick={() => setFormModel(true)}  className="bg-graybg p-2 bg-opacity-20">Login</button>
             <button className='bg-secondaryText px-6 text-white'>Try for free</button>
           </li>
         </ul>
