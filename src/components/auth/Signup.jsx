@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
+import axios from "axios";
 import { AnimatePresence, motion} from "framer-motion";
 import React, { useState } from "react";
 
 const Register = ({setFormModel,setSignupModel}) => {
   const [errors, setErrors] = useState({});
   const [signupData, setSignupData] = useState({
-    username: "",
+    name: "",
     password: "",
     email: "",
   });
@@ -15,9 +16,9 @@ const Register = ({setFormModel,setSignupModel}) => {
 
 console.log(signupData);
 
-  const validUsername = (username) => {
+  const validname = (name) => {
     const regex = /^[a-zA-Z0-9]{3,}$/;
-    return regex.test(String(username));
+    return regex.test(String(name));
   };
 
   const validPassword = (password) => {
@@ -34,15 +35,15 @@ console.log(signupData);
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const allError = {};
 
     console.log(allError);
 
-    if (!validUsername(signupData.username)) {
-      allError.username =
-        "Username must be at least 3 characters long and contain only letters and numbers.";
+    if (!validname(signupData.name)) {
+      allError.name =
+        "name must be at least 3 characters long and contain only letters and numbers.";
     }
 
 
@@ -54,10 +55,28 @@ console.log(signupData);
     if (Object.keys(allError).length > 0) {
       setErrors(allError);
     } else {
+try {
+  const res = await axios.post('http://localhost:5000/api/register', signupData)
+  console.log(res.data);
+  console.log("Form submitted successfully");
+  
+  localStorage.setItem("user", JSON.stringify(res.data));
+  localStorage.setItem("token", res.data.token);
+
+
+  setErrors({});
+  setSignupModel(false)
+  setFormModel(false)
+
+
+
+} catch (error) {
+  allError.apierror = error.messsage
+  setErrors(allError)
+  console.log(error.msg)
+}
+
     
-      // Submit the form or handle login logic
-      console.log("Form submitted successfully");
-      setErrors({});
     }
   };
 
@@ -104,17 +123,17 @@ console.log(signupData);
 
           <form onSubmit={handleSubmit} noValidate>
             <div className="mb-4">
-              <label className="block text-gray-700">Username</label>
+              <label className="block text-gray-700">name</label>
               <input
                 type="text"
-                name="username"
-                value={signupData.username}
+                name="name"
+                value={signupData.name}
                 onChange={handleChange}
                 required
                 className="w-full p-2 border border-gray-300 rounded mt-1"
               />
-              {errors.username && (
-                <p className="text-red-500 text-sm mt-1">{errors.username}</p>
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
               )}
             </div>
 

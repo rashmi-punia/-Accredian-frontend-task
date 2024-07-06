@@ -93,7 +93,7 @@ const Accordian = ({ data }) => {
 
 const Faq = ({faqRef}) => {
   const [activeTab, setActiveTab] = useState("1");
-  console.log(activeTab);
+  // console.log(activeTab);
 
   const handleTab = (e) => {
     e.preventDefault();

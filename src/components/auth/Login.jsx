@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
 
 const Login = ({ setFormModel, setSignupModel }) => {
   const [loginData, setLoginData] = useState({
@@ -18,9 +19,31 @@ const Login = ({ setFormModel, setSignupModel }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+
+    try {
+       const config = {
+         headers: {
+           Authorization: `Bearer ${localStorage.getItem("token")}`,
+         },
+       };
+
+      const res = await axios.post('http://localhost:5000/api/login',loginData,config)
+      console.log(res.data);
+
+
+      setFormModel(false)
+
+    } catch (error) {
+      setFormModel(true)
+      setSignupModel(true)
+
+      console.error(error.msg)
+      console.log(error);
+    }
   };
+
 
   const pageVariants = {
     initial: {

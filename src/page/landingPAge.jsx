@@ -37,7 +37,7 @@ const LandingPage = () => {
 
   }
 
-  console.log(referRef,benefitRef,faqRef);
+  // console.log(referRef,benefitRef,faqRef);
 
   return (
     <>
@@ -55,7 +55,7 @@ const LandingPage = () => {
       )}
 
       {openReferal && (
-        <ReferNow divRef={divRef} handleClose={handleClose} />
+        <ReferNow divRef={divRef} handleClose={handleClose} setOpenReferal={setOpenReferal} />
       )}
 
       <Navbar setFormModel={setFormModel}  />
