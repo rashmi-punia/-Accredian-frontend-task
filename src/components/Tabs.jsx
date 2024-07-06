@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tabs = () => {
   return (
-    <div className="capitalize mt-24 mx-auto w-fit">
+    <div className="capitalize mt-7 mx-auto w-fit">
       <ul className="flex gap-14 px-12 bg-secondaryBlue bg-opacity-15 p-3 rounded-full">
         <li>
           refer

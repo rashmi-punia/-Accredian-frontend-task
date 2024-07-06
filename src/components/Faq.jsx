@@ -102,10 +102,9 @@ const Faq = () => {
   };
 
   return (
-    <div>
-      <h1 className=" font-semibold text-lg text-center">
-        What are the{" "}
-        <span className="text-secondaryBlue">referral benefits?</span>
+    <div className="my-14">
+      <h1 className=" font-semibold text-lg py-8 text-center">
+        Frequently Asked <span className="text-secondaryBlue">Questions</span>
       </h1>
 
       <div className="flex justify-between gap-5 min-w-md w-[70vw] mx-auto">
@@ -152,23 +151,24 @@ const Faq = () => {
         </div>
       </div>
 
-        <div className="flex justify-center items-start gap-5 rounded-xl mx-auto max-w-5xl bg-secondaryText mt-10 p-8 text-white">
-          <div className="p-3 rounded-xl  border-4 border-secondaryText/45 w-fit bg-white text-secondaryText">
-            <PiHeadsetFill className="size-10" />
-          </div>
-          <div className="flex-1">
-            <p className="text-2xl font-semibold">Want to delve deeper into the program?</p>
-            <p className="text-sm">
-              Share your details to receive expert insights from our program
-              team!
-            </p>
-          </div>
-          <div className="mx-auto capitalize text-secondaryText bg-white px-8 tracking-wider py-2 rounded">
-            get in touch
-            <IoIosArrowForward className="inline-flex ml-1 " />
-          </div>
+      <div className="flex h-[210px] justify-center items-center gap-5 rounded-xl mx-auto max-w-5xl bg-secondaryText mt-10 p-8 text-white">
+        <div className="p-3 rounded-xl  border-4 border-secondaryText/45 w-fit bg-white text-secondaryText">
+          <PiHeadsetFill className="size-10" />
+        </div>
+        <div className="flex-1">
+          <p className="text-2xl font-semibold">
+            Want to delve deeper into the program?
+          </p>
+          <p className="text-sm">
+            Share your details to receive expert insights from our program team!
+          </p>
+        </div>
+        <div className="mx-auto capitalize text-secondaryText bg-white px-8 tracking-wider py-2 rounded">
+          get in touch
+          <IoIosArrowForward className="inline-flex ml-1 " />
         </div>
       </div>
+    </div>
   );
 };
 

@@ -9,14 +9,14 @@ import { FaChevronDown } from "react-icons/fa";
 
 
 const TippyCourses = () => {
-    const content =(
-        <div className='bg-white py-2 px-3 w-fit shadow border text-start text-textColor  *:py-1  rounded-sm'>
-            <p className='hover:text-secondaryText hover:underline'>Frontend</p>
-            <p className='hover:text-secondaryText hover:underline'>Backend</p>
-            <p className='hover:text-secondaryText hover:underline'>web development</p>
-            <p className='hover:text-secondaryText hover:underline'>Full satck</p>
+    const content =
+        <div className='bg-white w-fit shadow capitalize border text-start text-textColor  *:p-2  rounded '>
+            <p className='hover:text-secondaryText hover:bg-secondaryText/15 '>Frontend</p>
+            <p className='hover:text-secondaryText hover:bg-secondaryText/15 '>Backend</p>
+            <p className='hover:text-secondaryText hover:bg-secondaryText/15 '>web development</p>
+            <p className='hover:text-secondaryText hover:bg-secondaryText/15 '>Full satck</p>
         </div>
-    )
+    
 
   return (
     <Tippy

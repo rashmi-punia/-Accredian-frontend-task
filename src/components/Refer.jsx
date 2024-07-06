@@ -10,7 +10,7 @@ import { GiWallet } from "react-icons/gi";
 const Refer = () => {
   return (
     <div className="bg-secondaryText p-3 h-fit bg-opacity-15 mt-10 text-center">
-      <h1 className="capitalize text-lg">
+      <h1 className="capitalize text-lg font-semibold">
         How do i <span className="text-secondaryText"> refer?</span>
       </h1>
       <div className="w-[1340px] h-[510px] relative object-center object-cover overflow-hidden -mt-16 mx-20">

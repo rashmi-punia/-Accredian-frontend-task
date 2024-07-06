@@ -19,9 +19,9 @@ const Navbar = () => {
           <li>Refer & Earn</li>
           <li>resources</li>
           <li>about us</li>
-          <li className="gap-3 flex *:p-1.5  *:rounded">
-            <button className="bg-graybg  bg-opacity-20">Login</button>
-            <button className='bg-secondaryText text-white'>Try for free</button>
+          <li className="gap-3 flex  *:rounded">
+            <button className="bg-graybg p-2 bg-opacity-20">Login</button>
+            <button className='bg-secondaryText px-6 text-white'>Try for free</button>
           </li>
         </ul>
       </div>

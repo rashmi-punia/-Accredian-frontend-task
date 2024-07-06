@@ -4,7 +4,7 @@ import earnimg from "../assets/images/earn.png"
 
 const Hero = () => {
   return (
-    <div className="mx-auto relative mt-12 w-[75vw] overflow-hidden h-[60vh] flex justify-between bg-secondaryText bg-opacity-15 rounded-2xl shadow-xl">
+    <div className="mx-auto relative mt-4 w-[75vw] overflow-hidden h-[60vh] flex justify-between bg-secondaryText bg-opacity-15 rounded-2xl shadow-xl">
       <div className="mx-10 my-auto">
         <div className="flex-col items-start gap-8 flex">
           <img

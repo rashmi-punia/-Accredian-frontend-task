@@ -16,6 +16,7 @@ const LandingPage = () => {
       <span className="text-secondaryBlue mx-2">Contact Expert</span>
     </p>
 
+
     <Navbar />
     <Tabs />
     <Hero />
@@ -23,6 +24,7 @@ const LandingPage = () => {
     <Benefits />
     <Faq />
     <Footer />
+
     </>
   );
 };

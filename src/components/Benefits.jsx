@@ -19,7 +19,7 @@ const result2 = [...Array(30)].map(() => ProgramDetail[0]);
 
 const Benefits = () => {
   return (
-    <div className="text-center capitalize">
+    <div className="text-center mt-10 capitalize">
       <h1 className=" font-semibold text-lg">
         What are the{" "}
         <span className="text-secondaryBlue">referral benefits?</span>
