@@ -56,7 +56,10 @@ console.log(signupData);
       setErrors(allError);
     } else {
 try {
-  const res = await axios.post('http://localhost:5000/api/register', signupData)
+  const res = await axios.post(
+    "https://accerdian-backend-task-ccjx.onrender.com/api/register",
+    signupData
+  );
   console.log(res.data);
   console.log("Form submitted successfully");
   

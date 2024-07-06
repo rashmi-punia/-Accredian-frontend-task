@@ -30,8 +30,10 @@ const ReferNow = ({ divRef, handleClose, setOpenReferal }) => {
   const handleCodeRequest = async()=>{
     try {
         
-      
-        const data = await axios.get('http://localhost:5000/api/refer/create')
+
+        const data = await axios.get(
+          "https://accerdian-backend-task-ccjx.onrender.com/api/refer/create"
+        );
         console.log(data);
         setCode(data)
 
